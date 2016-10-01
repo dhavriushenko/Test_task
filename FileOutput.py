@@ -6,19 +6,20 @@ import os
 if len(sys.argv) != 2:
     print('Usage: FileOutput.py <File> ')
     sys.exit(1)
+print(sys.argv[1])
+filename = sys.argv[1]
+#filename = '/Users/temp/PycharmProjects/Test_task/tests/features/test_input.txt'
 
-filename = sys.argv[2]
-#filename = '/Users/temp/Desktop/test/1.plist'
 line = 5
 
 
 class Output(object):
 
-    def outputlast5lines(self, line):
+    def outputlast5lines(self, filename):
         buffersize = 1024
-        filesize = os.stat(self).st_size
+        filesize = os.stat(filename).st_size
         iter = 0
-        with open(self) as inf:
+        with open(filename) as inf:
             result = []
             if buffersize > filesize:
                 buffersize = filesize - 1
@@ -31,4 +32,4 @@ class Output(object):
                     print(''.join(result[-5::]))
                     break
 
-Output.outputlast5lines(filename, line)
+Output().outputlast5lines(filename)
