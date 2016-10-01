@@ -1,0 +1,12 @@
+# Created by temp at 10/1/16
+
+Feature: Test feature
+   Print the last five lines of a file
+
+  Background:
+    Given I am using the application
+
+#  Scenario: Output 5 last lines of the filet hat consist of more the 5 lines
+#    Given I input file with 7 lines
+    #noinspection CucumberUndefinedStep
+#    Then I should see 5 lines as output
