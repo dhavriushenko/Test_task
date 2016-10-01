@@ -1,11 +1,13 @@
 # Test_task
 
-Project info
+### Project info
 
-Tools
+#### Tools
 
-Python 2.7.11
-Lettuce 0.2.21
-BDD Feature files
+- Python 2.7.11
+- Lettuce 0.2.21
 
-/test/features
+
+#### BDD Feature files
+
+[test/features](https://github.com/dhavriushenko/Test_task/edit/master/test/features)
