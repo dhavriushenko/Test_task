@@ -10,7 +10,7 @@
 
 #### BDD Feature files
 
-[test/features](https://github.com/dhavriushenko/Test_task/edit/master/test/features)
+[test/features](https://github.com/dhavriushenko/Test_task/edit/master/app/test/features)
 
 ### 
 **To run  BDD test**
