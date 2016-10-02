@@ -6,7 +6,12 @@ Feature: Test feature
   Background:
     Given I am using the application
 
-#  Scenario: Output 5 last lines of the filet hat consist of more the 5 lines
-#    Given I input file with 7 lines
-    #noinspection CucumberUndefinedStep
-#    Then I should see 5 lines as output
+  Scenario: Output 5 last lines of the file that consist of more the 5 lines
+    Given file with 7 lines
+    When I use given file with following lines "333"
+    Then I see output of "333"
+
+ # Scenario: Output 0 lines of the file empty file
+ #   Given empty file
+ #   When I use given file
+ #   Then I see output of 0  lines
