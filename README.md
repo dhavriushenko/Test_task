@@ -18,5 +18,5 @@
 1. step by step:
   1. navigate to the project-root and install dependencies by: `pip install -r requirements.txt` or `sudo -H pip install -r requirements.txt` in case of Mac OSX
   2. install the project locally in development mode 
- ```pip install -e .``` (it creates a special .egg-link file in the deployment directory, that links to your project’s source code) or add path to your project folder in stpe.py (uncomment )
+ ```pip install -e .``` (it creates a special .egg-link file in the deployment directory, that links to your project’s source code) or add path to your project folder in step.py (uncomment )
   2. start testing by:  ```lettuce  lettuce ''PATH_TO_PROJECT/Test_task/tests/features/Output.feature```
