@@ -6,4 +6,4 @@ virtualenv venv
 pip install -r requirements.txt
 pip install -e .
 
-lettuce vm/test/ --with-xunit
+lettuce test/ --with-xunit
