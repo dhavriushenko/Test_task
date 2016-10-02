@@ -6,12 +6,23 @@ Feature: Test feature
   Background:
     Given I am using the application
 
-  Scenario: Output 5 last lines of the file that consist of more the 5 lines
-    Given file with 7 lines
-    When I use given file with following lines "333"
-    Then I see output of "333"
+  Scenario: Output 5 last lines of the file that consist of 5 lines
+    Given File with 5 lines
+    When I use given file with following lines
+         """one\ntwo\nthree\nfour\nfive"""
+    Then I should see following output:
+         """one\ntwo\nthree\nfour\nfive"""
 
- # Scenario: Output 0 lines of the file empty file
- #   Given empty file
- #   When I use given file
- #   Then I see output of 0  lines
+  Scenario: Output 5 last lines of the file that consist of >5 lines
+    Given File with 6 lines
+    When I use given file with following lines
+         """one\ntwo\nthree\nfour\nfive\nsix"""
+    Then I should see following output:
+         """two\nthree\nfour\nfive\nsix"""
+
+  Scenario: Output 5 last lines of the file that consist of <5 lines
+    Given File with 4 lines
+    When I use given file with following lines
+         """one\ntwo\nthree\nfour"""
+    Then I should see following output:
+         """one\ntwo\nthree\nfour"""
