@@ -3,26 +3,17 @@
 Feature: Test feature
    Print the last five lines of a file
 
-  Background:
-    Given I am using the application
+   Scenario Outline: Output 5 last lines of the file
+    Given File with following lines <input>
+    When  I use given file
+    Then  I should see following <output>
 
-  Scenario: Output 5 last lines of the file that consist of 5 lines
-    Given File with 5 lines
-    When I use given file with following lines
-         """one\ntwo\nthree\nfour\nfive"""
-    Then I should see following output:
-         """one\ntwo\nthree\nfour\nfive"""
-
-  Scenario: Output 5 last lines of the file that consist of >5 lines
-    Given File with 6 lines
-    When I use given file with following lines
-         """one\ntwo\nthree\nfour\nfive\nsix"""
-    Then I should see following output:
-         """two\nthree\nfour\nfive\nsix"""
-
-  Scenario: Output 5 last lines of the file that consist of <5 lines
-    Given File with 4 lines
-    When I use given file with following lines
-         """one\ntwo\nthree\nfour"""
-    Then I should see following output:
-         """one\ntwo\nthree\nfour"""
+    Examples:
+      | input                              | output                       |
+      | '1'                                | '1'                          |
+      | 'one\ntwo\nthree\nfour\nfive'      | 'one\ntwo\nthree\nfour\nfive'|
+      | 'one\ntwo\nthree\nfour\nfive\nsix' | 'two\nthree\nfour\nfive\nsix'|
+      | 'one\ntwo\nthree\nfour'            | 'one\ntwo\nthree\nfour'      |
+      | 'one'                              | 'one'                        |
+      | ''                                 | ''                           |
+      | '1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n'  | '6\n7\n8\n9\n10\n'           |
