@@ -1,6 +1,6 @@
 # Created by temp at 10/1/16
 
-Feature: Test feature
+Feature: Output of last 5 lines from input file
    Print the last five lines of a file
 
    Scenario Outline: Output 5 last lines of the file
